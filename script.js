@@ -89,8 +89,8 @@
     //make it work for mobile too
     document.addEventListener('touchmove', e => {
         e = e.changedTouches[e.changedTouches.length - 1]
-        mouse.x = e.pageX
-        mouse.y = e.pageY
+        mouse.x = e.clientX
+        mouse.y = e.clientY
     })
 
     //listen for clicks
