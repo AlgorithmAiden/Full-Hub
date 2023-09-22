@@ -86,6 +86,13 @@
         mouse.y = e.y
     })
 
+    //make it work for mobile too
+    document.addEventListener('touchmove', e => {
+        e = e.changedTouches[e.changedTouches.length - 1]
+        mouse.x = e.screenX
+        mouse.y = e.screenY
+    })
+
     //listen for clicks
     document.addEventListener('click', e => window.location.href = sites[Math.floor(mouse.y / (canvas.height / sites.length))].url)
 
